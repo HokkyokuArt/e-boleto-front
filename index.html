@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/fonts.css">
+    <link rel="stylesheet" href="./style/configs.css">
+    <link rel="stylesheet" href="./style/general-index.css">
+    <link rel="stylesheet" href="./style/landing-page.css">
+    <link rel="stylesheet" href="./style/login.css">
+    <link rel="shortcut icon" href="./img/e-boleto-favicon.ico" type="image/x-icon">
+    <script type="module" src="./script/landing-page.js" defer></script>
+    <script type="module" src="./script/login.js"></script>
+    <script src="https://kit.fontawesome.com/412311175c.js" crossorigin="anonymous"></script>
+    <title>E-Boleto | Pagina inicial</title>
+</head>
+
+<body>
+    <main class="main-index background">
+        <section id="landing-page" class=" center-content">
+
+            <div class="div-main-logo center-content">
+                <img src="./img/e-boleto.png" alt="E-Boleto Logo" class="coin-flip" style="--h: 30px">
+
+            </div>
+
+            <div class="div-presentation center-content">
+                <h1>E-Boleto</h1>
+                <code>12345678</code>
+                <h2>Chegou um novo jeito de você manter seus boletos em dia!!!</h2>
+            </div>
+
+        </section>
+
+        <section id="login-page" class=" center-content">
+            <div class="login">
+                <div class="div-login center-content">
+                    <form>
+                        <h1>Login</h1>
+                        <div class="div-input">
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" id="input-email" placeholder="Digite seu email">
+                        </div>
+
+                        <div class="div-input">
+                            <label for="password">Senha</label>
+                            <div class="div-input-password">
+                                <input type="password" name="password" id="input-password"
+                                    autocomplete="current-password" placeholder="Digite sua senha" spellcheck="false">
+                                <div class="icon">
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="div-btn">
+                            <button type="submit">
+                                <i class="fa-solid fa-check"></i>
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="div-img center-content">
+                    <img src="./img/e-boleto.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <div class="btn-container btn-bottom-left">
+            <button class="btn center-content animation-double-jump">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </button>
+        </div>
+    </main>
+</body>
+
+</html>

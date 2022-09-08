@@ -1,0 +1,56 @@
+.main-index {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    transition: top .5s ease-in-out;
+}
+.scroll-to-login {
+    top: -100%;
+}
+.btn-container {
+    position: fixed;
+    width: auto;
+    height: auto;
+}
+.btn-bottom-left{
+    bottom: 1.5vh;
+    right: 1.5vh;
+}
+.btn-container .btn {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--orange);
+    box-shadow:
+        0 0 0 2px var(--light-orange),
+        0 0 0 5px var(--orange),
+        0 6px 15px rgba(179, 101, 17, 1);
+    font-size: var(--font-size-others);
+    font-family: var(--font-italic);
+    color: var(--purple);
+    font-weight: var(--bold);
+    cursor: pointer;
+}
+.btn-container .btn i {
+    position: absolute;
+    transition: .5s;
+    user-select: none;
+}
+.btn-container .btn i:nth-child(1) {
+    opacity: 1;
+}
+.btn-container .btn i:nth-child(2) {
+    opacity: 0;
+}
+.btn-container .change-btn i:nth-child(1) {
+    opacity: 0;
+}
+.btn-container .change-btn i:nth-child(2) {
+    opacity: 1;
+}
+.main-index section {
+    width: 100%;
+    height: 100vh;
+}

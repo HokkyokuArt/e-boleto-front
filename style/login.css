@@ -1,0 +1,123 @@
+#login-page {
+    position: relative;
+}
+#login-page .login {
+    position: relative;
+    width: 60%;
+    height: 70%;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 6px 6px 30px rgb(204, 141, 47, .5);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+#login-page .login div {
+    height: 100%;
+    width: 100%;
+}
+#login-page .login form {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+#login-page .login form h1 {
+    text-transform: uppercase;
+    font-size: var(--font-size-title);
+    font-family: var(--font-regular);
+    color: var(--purple);
+    font-weight: var(--bold);
+    user-select: none;
+    margin-bottom: 50px;
+    letter-spacing: 5px;
+}
+#login-page .login form .div-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    width: 100%;
+}
+#login-page .login form .div-input label {
+    font-size: var(--font-size-text);
+    font-family: var(--font-regular);
+    color: var(--gray);
+    margin-bottom: 25px;
+    user-select: none;
+}
+#login-page .login form .div-input input {
+    background-color: transparent;
+    max-width: 100%;
+    min-width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    outline: none;
+    border: 2px solid var(--light-gray);
+    border-radius: 100px;
+    font-size: var(--font-size-subtext);
+    color: var(--purple);
+    padding: 20px;
+    font-weight: var(--bold);
+    transition: border .5s;
+    letter-spacing: 1px;
+}
+#login-page .login form .div-input input:-webkit-autofill {
+    -webkit-text-fill-color: var(--purple) !important;
+}
+#login-page .login form .div-input input:-webkit-autofill {
+    box-shadow: 0 0 0 30px #fff inset;
+}
+#login-page .login form .div-input input:focus {
+    border-color: var(--light-orange);
+}
+#login-page .login form .div-input input::placeholder {
+    font-size: var(--font-size-small-text);
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+#login-page .login form .div-input .div-input-password {
+    width: 100%;
+    position: relative;
+    color: var(--purple);
+}
+#login-page .login form .div-input .div-input-password i {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: var(--font-size-others);
+    cursor: pointer;
+}
+#login-page .login form .div-btn {
+    width: 80px;
+    height: 80px;
+    align-self: center;
+    border-radius: 100px;
+}
+#login-page .login form .div-btn button {
+    width: 100%;
+    height: 100%;
+    background-color: var(--orange);
+    border: none;
+    box-shadow:
+        0 0 0 3px var(--light-orange),
+        0 0 0 7px var(--orange),
+        0 6px 15px rgba(179, 101, 17, 1);
+    cursor: pointer;
+    font-size: var(--font-size-subtitle);
+    color: #fff;
+    border-radius: 100px;
+    color: var(--purple);
+    transition: transform 1s ease-in-out;
+}
+#login-page .login .div-img {
+    background: url(../img/bg-login.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    user-select: none;
+    
+}
+#login-page .login .div-img img{
+    width: 80%;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/fonts.css">
+    <link rel="stylesheet" href="./style/configs.css">
+    <link rel="stylesheet" href="./style/general-index.css">
+    <link rel="stylesheet" href="./style/boleto.css">
+    <link rel="shortcut icon" href="./img/e-boleto-favicon.ico" type="image/x-icon">
+    <script type="module" src="./script/boleto.js"></script>
+    <script src="https://kit.fontawesome.com/412311175c.js" crossorigin="anonymous"></script>
+    <title>E-Boleto | Meus Boletos</title>
+</head>
+
+<body class="background">
+    <header>
+        <h1>Bem vindo <span id="name">User</span>!</h1>
+        <div class="div-logo">
+            <img src="./img/e-boleto.png" alt="E-boleto logo" class="coin-flip" style="--h: 0">
+
+            <div class="about center-content">
+                <p>By
+                    <a href="https://github.com/Hiziane" target="_blank"><span style="--clr: #800000">H</span></a>
+                    <a href="https://github.com/HokkyokuArt" target="_blank"><span style="--clr: #f58611">J</span></a>
+                    <a href="https://github.com/vnCraveiro" target="_blank"><span style="--clr: #008000">V</span></a>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-system center-content">
+        <section class="div-boleto">
+            <div class="filters">
+                <div class="div-pre">
+                    <pre>Meus <span>Boletos</span>:</pre>
+                </div>
+
+                <div class="div-filter">
+                    <p class="center-content">Filtros:</p>
+                    <ul>
+                        <li style="--i: 0;" class="dropdown center-content">Abertos</li>
+                        <li style="--i: 1;" class="center-content dropdown-list ">Todos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="boleto-wrap">
+                <div class="table-container">
+                    <table id="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Status</th>
+                                <th>Vencimento</th>
+                                <th>Valor</th>
+                                <th>Alterado</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <a href="./index.html#login-page" class="btn-container btn-bottom-left" onclick="localStorage.clear();">
+            <button class="btn center-content">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </button>
+        </a>
+
+        <div id="div-block"></div>
+    </main>
+</body>
+
+</html>

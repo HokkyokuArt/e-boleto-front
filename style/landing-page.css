@@ -1,0 +1,34 @@
+#landing-page div{
+    height: 100%;
+    width: 100%;
+}
+#landing-page .div-main-logo{
+    flex-direction: column;
+}
+#landing-page .div-main-logo img{
+    width: 600px;
+    user-select: none;
+    -webkit-box-reflect: below -100px linear-gradient(transparent, transparent, rgba(0,0,0,.01),rgba(0,0,0,.50));
+}
+#landing-page .div-presentation{
+    flex-direction: column;
+}
+#landing-page .div-presentation h1 {
+    font-size: var(--font-size-main-title);
+    font-weight: var(--regular);
+    font-family: var(--font-logo);
+    user-select: none;
+}
+#landing-page .div-presentation code{
+    font-size: var(--font-size-main-title);
+    font-weight: var(--regular);
+    font-family: var(--font-code);
+    user-select: none;
+}
+#landing-page .div-presentation h2{
+    font-size: var(--font-size-text);
+    font-weight: var(--bold);
+    font-family: var(--font-italic);
+    user-select: none;
+    color: var(--purple);
+}

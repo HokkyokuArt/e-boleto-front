@@ -1,0 +1,212 @@
+:root {
+    --orange: #f58611;
+    --light-orange: #fac03d;
+    --purple: #5e17eb;
+    --gray: #444;
+    --light-gray: #6b6b6b;
+    --red: #ff0000;
+    --green: #008000;
+}
+
+/* ===================> Alignment <=================== */
+.center-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===================> Background <=================== */
+.background {
+    background: url(../img/backgound.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ===================> Create elemnet <=================== */
+.create-element {
+    width: auto;
+    max-width: 80%;
+    height: 200px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 20px;
+    padding: 50px 50px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    transition: .4s;
+    opacity: 0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 10px;
+    z-index: 2000;
+}
+.create-element>* {
+    font-size: var(--font-size-subtitle);
+    font-family: var(--font-regular);
+    font-weight: var(--bold);
+}
+.error {
+    width: 600px;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: row;
+    color: var(--red);
+    background: rgba(255, 142, 142, 0.3);   
+}
+.success{
+    width: 600px;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: row;
+    color: var(--green);
+    background: rgba( 104, 255, 118, 0.25 );
+}
+.confirmation {
+    width: 700px;
+    justify-content: space-between;
+    gap: 20px;
+    color: var(--light-gray);
+    background: rgba(255, 255, 255, 0.6);
+}
+.confirmation div{
+    display: flex;
+}
+.information-boleto{
+    background: rgba(255, 255, 255, 0.6);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray);
+    height: 300px;
+}
+.information-boleto div:nth-child(1){
+    justify-self: flex-end;
+    width: 100%;
+    position: relative;
+}
+.information-boleto div:nth-child(1) i{
+    position: absolute;
+    top: -55px;
+    right: -30px;
+    transition: color .2s;
+    cursor: pointer;
+}
+.information-boleto div:nth-child(1) i:hover{
+    color: var(--red);
+}
+.information-boleto div:nth-child(2){
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    user-select: text;
+}
+::selection{
+    background: var(--orange);
+    color: var(--purple);
+}
+.information-boleto div:nth-child(2) #code{
+    font-family: var(--font-code);
+    font-size: 3em;
+    font-weight: var(--regular);
+    user-select: none;
+}
+.information-boleto div:nth-child(3){
+    justify-self: center;
+    width: 100%;
+    position: relative;
+    color: var(--purple);
+    cursor: pointer;
+}
+.information-boleto div:nth-child(3) i{
+    position: absolute;
+    bottom: -35px;
+    right: 50%;
+    transform: translate(50%);
+}
+.visible-div {
+    opacity: 1;
+    top: 50%;   
+}
+#div-block{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color: #000;
+    opacity: .3;
+    display: none;
+}
+
+/* ===================> Animations <=================== */
+.animation-double-jump {
+    animation: double-jump 3s linear infinite;
+}
+.animation-double-jump:hover {
+    animation: none;
+}
+.coin-check-animation {
+    animation: coin-check-animation 1s ease-in-out;
+}
+.coin-flip {
+    animation: coin-flip 4s linear infinite;
+}
+
+@keyframes double-jump {
+    0%, 10%, 20%, 100% {
+        transform: translateY(0);
+    }
+    5%, 15% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes coin-check-animation {
+    to {
+        transform: rotateY(720deg);
+    }
+}
+
+@keyframes coin-flip {
+    0% {
+        transform: rotateY(0) translateY(0);
+    }
+    25% {
+        transform: rotateY(90deg) translateY(var(--h));
+    }
+    50% {
+        transform: rotateY(180deg) translateY(0px);
+    }
+    75% {
+        transform: rotateY(270deg) translateY(var(--h));
+    }
+    100% {
+        transform: rotateY(360deg) translateY(0);
+    }
+}
+
+@keyframes tilt {
+    0%, 100%{
+        left: 50%;
+    }
+    25%{
+        left: calc(50% + 20px);
+    }
+    75%{
+        left: calc(50% - 20px);
+    }
+}
