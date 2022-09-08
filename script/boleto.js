@@ -75,7 +75,6 @@ function clickTr() {
 }
 
 //<==================== Click on the icon to change the expiration date ====================> //
-
 function clickIconDatePlus() {
     const iconDatePlus = module.$A('td > i')
     iconDatePlus.forEach(icon => {
@@ -128,6 +127,42 @@ function clickIconDatePlus() {
         })
     })
 }
+
+//<==================== Logoff ====================> //
+const btnLogoff = module.$('#btnLogoff')
+btnLogoff.addEventListener('click', () => {
+    module.createElement(`confirmation`, `Deseja realmente sair?`, body)
+    const btnCancel = module.$('#btn-cancel')
+    const btnConfirm = module.$('#btn-confirm')
+
+    let animate = { animateCancel: false, animateConfirm: false }
+    btnCancel.addEventListener('mouseover', () => {
+        module.animation(btnCancel, animate.animateCancel, 'coin-check-animation')
+    })
+    btnConfirm.addEventListener('mouseover', () => {
+        module.animation(btnConfirm, animate.animateConfirm, 'coin-check-animation')
+    })
+
+    const divBlock = module.$('#div-block')
+    const div = module.$(`.confirmation`)
+
+    divBlock.addEventListener('click', () => {
+        div.style.animation = 'tilt .25s linear'
+        setTimeout(() => {
+            div.style.animation = 'none'
+        }, 250);
+    })
+
+    btnCancel.addEventListener('click', () => {
+        module.removeDiv(0, div, body)
+        divBlock.style.display = 'none'
+    })
+
+    btnConfirm.addEventListener('click', () => {
+        localStorage.clear()
+        window.location.href = `./index.html`
+    })
+})
 
 //<==================== Functions ====================> //
 function makeGetRequest(endpoint) {
